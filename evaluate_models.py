@@ -16,7 +16,7 @@ img_dir = [('ed2','eddy'),('ed3','eddy'),('ed4','eddy'),('ed5','eddy'),
 ('img9','nkechi'),('img10','kayode'),('kay','kayode'),('kay2','kayode'),
 ('kay3','kayode'),('img12','chukwu'),('img13','chukwu')]
 
-results = []
+results_x = []
 
 original_count = 0
 for img in img_dir:
@@ -29,7 +29,7 @@ for img in img_dir:
 		if(obj_vgg.perform_verification() == correct_pred):
 			count+=1
 
-results.append((obj_vgg.get_model_name(),count,original_count))
+results_x.append((obj_vgg.get_model_name(),count,original_count))
 
 
 
