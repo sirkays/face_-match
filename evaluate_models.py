@@ -25,15 +25,13 @@ for img in img_dir:
 		original_count += 1
 		correct_pred = img[1] == img_x[1]
 		obj_vgg = deep_class.Vgg_model_analysis(img[0]+".jpg",img_x[0]+".jpg",
-			'retinaface','cosine,','not set')
-		if(obj_vgg.perform_verification() == correct_pred):
+			'retinaface','cosine','not set')
+		obj_vgg.perform_verification()
+		if(obj_vgg.get_verification() == correct_pred):
 			count+=1
 
-results_x.append((obj_vgg.get_model_name(),count,original_count))
-
-
-
-print(results)
+	results_x.append((obj_vgg.get_model_name(),count,original_count))
+	print(results)
 
 
 
